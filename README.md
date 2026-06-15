@@ -196,6 +196,14 @@ simple-survey-api
 
 ## Miscellaneous
 
+# Before Deployment Run 
+```bash
+mvn package -DskipTests  
+```
+```bash
+ls target/*.jar
+```
+
 ## Docker Setup
 
 ```bash
@@ -217,6 +225,9 @@ docker run -d \
 
 ```bash
 docker stop skyforms-app-container
+```
+
+```bash
 docker rm skyforms-app-container
 ```
 

@@ -1,13 +1,13 @@
-# Use an official OpenJDK runtime as a parent image
-FROM openjdk:17-jdk-slim
+# Use Eclipse Temurin (the maintained OpenJDK distribution)
+FROM eclipse-temurin:17-jdk-jammy
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the Spring Boot JAR file into the container
-COPY build/libs/*.jar app.jar
+# Copy the Maven JAR file into the container
+COPY target/*.jar app.jar
 
-# Expose the application port (optional, but useful for documentation)
+# Expose the application port
 EXPOSE 8080
 
 # Run the Spring Boot application
